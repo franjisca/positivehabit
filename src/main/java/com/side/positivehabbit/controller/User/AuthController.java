@@ -1,6 +1,7 @@
 package com.side.positivehabbit.controller.User;
 
 import com.side.positivehabbit.dto.user.UserRequestDto;
+import com.side.positivehabbit.service.User.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

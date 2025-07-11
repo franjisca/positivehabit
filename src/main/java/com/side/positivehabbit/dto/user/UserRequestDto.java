@@ -1,19 +1,23 @@
 package com.side.positivehabbit.dto.user;
 
 import com.side.positivehabbit.domain.User;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserRequestDto {
 
-    public UserRequestDto() {
-    }
+    public String email;
+
+    public String password;
+
+    public String nickname;
 
 
-    public record UserResponseDto(Long id, String email, String nickname) {
-        public static UserResponseDto from(User user) {
-            return new UserResponseDto(user.getId(), user.getEmail(), user.getNickname());
-        }
 
-
-    }
-
-    }
+}
