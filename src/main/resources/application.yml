@@ -1,0 +1,40 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/positivehabbit?serverTimezone=Asia/Seoul
+    username: root
+    password: cos1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      show-sql: true
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: 12341234
+    password: 12341234
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+jwt:
+  header: Authorization
+  secret: 12341234
+  token-validity-in-seconds: 86400
+
+logging:
+  level:
+    me.j1yeon: DEBUG
+
+api-key:
+  kakao: ${kakao.key}
