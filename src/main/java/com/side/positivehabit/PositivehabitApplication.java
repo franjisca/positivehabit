@@ -1,13 +1,13 @@
-package com.side.positivehabbit;
+package com.side.positivehabit;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PositivehabbitApplication {
+public class PositivehabitApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PositivehabbitApplication.class, args);
+		SpringApplication.run(PositivehabitApplication.class, args);
 	}
 
 }
