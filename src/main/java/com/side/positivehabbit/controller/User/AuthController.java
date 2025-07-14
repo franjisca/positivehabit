@@ -1,6 +1,9 @@
 package com.side.positivehabbit.controller.User;
 
+import com.side.positivehabbit.domain.User;
 import com.side.positivehabbit.dto.user.UserRequestDto;
+import com.side.positivehabbit.dto.user.UserResponseDto;
+import com.side.positivehabbit.repository.user.UserRepository;
 import com.side.positivehabbit.service.User.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
 
     private final UserService userService;
+    private final UserRepository userRepository;
 
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody UserRequestDto dto) {
@@ -21,7 +25,11 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<UserRequestDto.UserResponseDto> login(@RequestBody UserRequestDto dto) {
-        return ResponseEntity.ok(userService.login(dto));
+    public ResponseEntity<UserResponseDto> login(@RequestBody UserRequestDto dto) {
+
+        UserResponseDto responseDto = userService.login(dto);
+        return ResponseEntity.ok()
+                .header("Authorization", "Bearer " + responseDto.accessToken())
+                .body(userService.login(dto));
     }
 }
