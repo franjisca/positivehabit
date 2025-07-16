@@ -1,6 +1,6 @@
 package com.side.positivehabit.repository.user;
 
-import com.side.positivehabit.domain.User;
+import com.side.positivehabit.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

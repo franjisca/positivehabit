@@ -1,6 +1,6 @@
 package com.side.positivehabit.dto.user;
 
-import com.side.positivehabit.domain.User;
+import com.side.positivehabit.domain.user.User;
 
 public record UserResponseDto(
         Long id,

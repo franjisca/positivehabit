@@ -1,6 +1,6 @@
 package com.side.positivehabit.dto.habit;
 
-import com.side.positivehabit.domain.Habit;
+import com.side.positivehabit.domain.habit.Habit;
 
 public record HabitResponseDto(
         Long id,

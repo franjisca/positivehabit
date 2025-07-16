@@ -1,6 +1,6 @@
 package com.side.positivehabit.service.habitlog;
 
-import com.side.positivehabit.domain.Habit;
+import com.side.positivehabit.domain.habit.Habit;
 import com.side.positivehabit.domain.HabitLog;
 import com.side.positivehabit.dto.habitlog.HabitLogRequestDto;
 import com.side.positivehabit.dto.habitlog.HabitLogResponseDto;

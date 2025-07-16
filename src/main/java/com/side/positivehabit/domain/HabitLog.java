@@ -1,5 +1,6 @@
 package com.side.positivehabit.domain;
 
+import com.side.positivehabit.domain.habit.Habit;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

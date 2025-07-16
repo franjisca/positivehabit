@@ -1,7 +1,7 @@
 package com.side.positivehabit.repository.habit;
 
 
-import com.side.positivehabit.domain.Habit;
+import com.side.positivehabit.domain.habit.Habit;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

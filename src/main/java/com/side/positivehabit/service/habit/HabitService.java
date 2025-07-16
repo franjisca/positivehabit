@@ -1,7 +1,7 @@
 package com.side.positivehabit.service.habit;
 
-import com.side.positivehabit.domain.Habit;
-import com.side.positivehabit.domain.User;
+import com.side.positivehabit.domain.habit.Habit;
+import com.side.positivehabit.domain.user.User;
 import com.side.positivehabit.dto.habit.HabitRequestDto;
 import com.side.positivehabit.dto.habit.HabitResponseDto;
 import com.side.positivehabit.repository.habit.HabitRepository;
@@ -28,7 +28,7 @@ public class HabitService {
                 .user(user)
                 .name(dto.name())
                 .description(dto.description())
-                .frequency(dto.frequency())
+                .equals(dto.frequency())
                 .build();
 
         return habitRepository.save(habit).getId();

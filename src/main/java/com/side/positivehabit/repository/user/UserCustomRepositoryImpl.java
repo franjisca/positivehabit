@@ -1,8 +1,8 @@
 package com.side.positivehabit.repository.user;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import com.side.positivehabit.domain.QUser;
-import com.side.positivehabit.domain.User;
+import com.side.positivehabit.domain.user.QUser;
+import com.side.positivehabit.domain.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
