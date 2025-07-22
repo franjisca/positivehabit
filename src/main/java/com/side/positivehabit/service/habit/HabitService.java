@@ -28,7 +28,6 @@ public class HabitService {
                 .user(user)
                 .name(dto.name())
                 .description(dto.description())
-                .equals(dto.frequency())
                 .build();
 
         return habitRepository.save(habit).getId();

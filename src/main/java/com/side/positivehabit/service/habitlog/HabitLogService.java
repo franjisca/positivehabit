@@ -1,7 +1,7 @@
 package com.side.positivehabit.service.habitlog;
 
 import com.side.positivehabit.domain.habit.Habit;
-import com.side.positivehabit.domain.HabitLog;
+import com.side.positivehabit.domain.habitlog.HabitLog;
 import com.side.positivehabit.dto.habitlog.HabitLogRequestDto;
 import com.side.positivehabit.dto.habitlog.HabitLogResponseDto;
 import com.side.positivehabit.repository.habit.HabitRepository;
@@ -27,8 +27,8 @@ public class HabitLogService {
 
         HabitLog log = HabitLog.builder()
                 .habit(habit)
-                .date(dto.date())
-                .completed(dto.completed())
+                .recordDate(dto.date())
+                .isCompleted(dto.completed())
                 .imageUrl(dto.imageUrl())
                 .build();
 

@@ -3,6 +3,7 @@ package com.side.positivehabit.domain.user;
 
 import com.side.positivehabit.domain.common.BaseTimeEntity;
 import com.side.positivehabit.domain.habit.Habit;
+import com.side.positivehabit.domain.usersettings.UserSettings;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
@@ -11,7 +12,6 @@ import org.hibernate.annotations.Where;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
 @Entity
 @Table(name = "users",
         indexes = {
@@ -72,8 +72,8 @@ public class User extends BaseTimeEntity {
     @Builder.Default
     private List<Habit> habits = new ArrayList<>();
 
-    //@OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    //private UserSettings userSettings;
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private UserSettings userSettings;
 
     // 비즈니스 메서드
     public void updateProfile(String name, String profileImageUrl) {

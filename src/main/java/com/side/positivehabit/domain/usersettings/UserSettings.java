@@ -1,6 +1,7 @@
 package com.side.positivehabit.domain.usersettings;
 
 import com.side.positivehabit.domain.common.BaseTimeEntity;
+import com.side.positivehabit.domain.user.User;
 import jakarta.persistence.*;
 import lombok.*;
 

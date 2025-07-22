@@ -1,6 +1,6 @@
 package com.side.positivehabit.dto.habitlog;
 
-import com.side.positivehabit.domain.HabitLog;
+import com.side.positivehabit.domain.habitlog.HabitLog;
 
 import java.time.LocalDate;
 

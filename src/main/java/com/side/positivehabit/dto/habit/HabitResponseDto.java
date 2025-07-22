@@ -6,14 +6,14 @@ public record HabitResponseDto(
         Long id,
         String name,
         String description,
-        String frequency
+        boolean frequency
 ) {
     public static HabitResponseDto from(Habit habit) {
         return new HabitResponseDto(
                 habit.getId(),
                 habit.getName(),
                 habit.getDescription(),
-                habit.getFrequency()
+                habit.getIsEveryday()
         );
     }
 }

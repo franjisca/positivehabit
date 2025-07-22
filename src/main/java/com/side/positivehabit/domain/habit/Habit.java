@@ -2,11 +2,18 @@ package com.side.positivehabit.domain.habit;
 
 
 import com.side.positivehabit.domain.common.BaseTimeEntity;
+import com.side.positivehabit.domain.habitlog.HabitLog;
 import com.side.positivehabit.domain.user.User;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
+
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "habits",
         indexes = {
@@ -87,7 +94,7 @@ public class Habit extends BaseTimeEntity {
 
     @OneToMany(mappedBy = "habit", cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
-    private List<DailyRecord> dailyRecords = new ArrayList<>();
+    private List<HabitLog> dailyRecords = new ArrayList<>();
 
     @OneToMany(mappedBy = "habit", cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
@@ -158,19 +165,19 @@ public class Habit extends BaseTimeEntity {
         this.user = user;
     }
 
-    public void addDailyRecord(DailyRecord dailyRecord) {
+    public void addDailyRecord(HabitLog dailyRecord) {
         dailyRecords.add(dailyRecord);
         dailyRecord.setHabit(this);
     }
 
-    public void removeDailyRecord(DailyRecord dailyRecord) {
+    public void removeDailyRecord(HabitLog dailyRecord) {
         dailyRecords.remove(dailyRecord);
         dailyRecord.setHabit(null);
     }
 
     public void addHabitPhoto(HabitPhoto habitPhoto) {
         habitPhotos.add(habitPhoto);
-        habitPhoto.setHabit(this);
+        habitPhoto.setHabit((Habit) this.habitPhotos);
     }
 
     public void removeHabitPhoto(HabitPhoto habitPhoto) {

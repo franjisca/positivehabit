@@ -1,6 +1,6 @@
 package com.side.positivehabit.repository.habitlog;
 
-import com.side.positivehabit.domain.HabitLog;
+import com.side.positivehabit.domain.habitlog.HabitLog;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;
