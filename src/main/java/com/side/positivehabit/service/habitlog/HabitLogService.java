@@ -5,7 +5,7 @@ import com.side.positivehabit.domain.habitlog.HabitLog;
 import com.side.positivehabit.dto.habitlog.HabitLogRequestDto;
 import com.side.positivehabit.dto.habitlog.HabitLogResponseDto;
 import com.side.positivehabit.repository.habit.HabitRepository;
-import com.side.positivehabit.repository.habitlog.HabitLogRepository;
+import com.side.positivehabit.repository.dailyrecord.DailyRecordRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ import java.util.List;
 @Transactional
 public class HabitLogService {
 
-    private final HabitLogRepository habitLogRepository;
+    private final DailyRecordRepository habitLogRepository;
     private final HabitRepository habitRepository;
 
     public Long saveLog(HabitLogRequestDto dto) {

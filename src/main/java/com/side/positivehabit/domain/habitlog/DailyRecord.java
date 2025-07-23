@@ -7,8 +7,10 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+
+
 @Entity
-@Table(name = "habit_log",
+@Table(name = "daily_records",
         uniqueConstraints = {
                 @UniqueConstraint(columnNames = {"user_id", "habit_id", "record_date"})
         },
@@ -22,7 +24,7 @@ import java.time.LocalDate;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Builder
-public class HabitLog extends BaseTimeEntity {
+public class DailyRecord extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -47,9 +49,6 @@ public class HabitLog extends BaseTimeEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "habit_id", nullable = false)
     private Habit habit;
-
-
-    private String imageUrl;
 
     // 비즈니스 메서드
     public void complete() {
@@ -92,9 +91,8 @@ public class HabitLog extends BaseTimeEntity {
     }
 
     // 정적 팩토리 메서드
-    public static HabitLog create
-    (User user, Habit habit, LocalDate date) {
-        HabitLog record = HabitLog.builder()
+    public static DailyRecord createDailyRecord(User user, Habit habit, LocalDate date) {
+        DailyRecord record = DailyRecord.builder()
                 .recordDate(date)
                 .isCompleted(false)
                 .build();
