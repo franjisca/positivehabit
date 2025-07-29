@@ -1,4 +1,4 @@
-package com.side.positivehabit.domain.habitlog;
+package com.side.positivehabit.domain.dailyrecord;
 
 import com.side.positivehabit.domain.common.BaseTimeEntity;
 import com.side.positivehabit.domain.habit.Habit;

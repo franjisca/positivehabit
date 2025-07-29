@@ -14,7 +14,7 @@ import java.time.LocalTime;
 import java.util.List;
 
 import static com.side.positivehabit.domain.habit.QHabit.habit;
-import static com.side.positivehabit.domain.habitlog.QHabitLog.habitLog;
+import static com.side.positivehabit.domain.dailyrecord.QHabitLog.habitLog;
 import static com.side.positivehabit.domain.user.QUser.user;
 
 public class HabitCustomRepositoryImpl implements HabitCustomRepository{

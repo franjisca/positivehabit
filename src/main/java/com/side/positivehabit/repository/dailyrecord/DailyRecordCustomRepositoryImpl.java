@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import static com.side.positivehabit.domain.habit.QHabit.habit;
-import static com.side.positivehabit.domain.habitlog.QHabitLog.habitLog;
+import static com.side.positivehabit.domain.dailyrecord.QHabitLog.habitLog;
 
 public class DailyRecordCustomRepositoryImpl implements DailyRecordCustomRepository {
 

@@ -2,7 +2,7 @@ package com.side.positivehabit.domain.habit;
 
 
 import com.side.positivehabit.domain.common.BaseTimeEntity;
-import com.side.positivehabit.domain.habitlog.HabitLog;
+import com.side.positivehabit.domain.dailyrecord.HabitLog;
 import com.side.positivehabit.domain.user.User;
 import jakarta.persistence.*;
 import lombok.*;
