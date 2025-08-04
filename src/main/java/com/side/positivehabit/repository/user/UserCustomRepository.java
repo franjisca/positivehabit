@@ -1,6 +1,7 @@
 package com.side.positivehabit.repository.user;
 
 import com.side.positivehabit.domain.user.User;
+import com.side.positivehabit.dto.user.UserSearchCondition;
 import org.hibernate.query.Page;
 
 import java.awt.print.Pageable;
