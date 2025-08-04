@@ -305,7 +305,7 @@ Gradle 7.5+
 
 실행 방법
 bash# 1. 프로젝트 클론
-git clone https://github.com/yourusername/positive-habit.git
+git clone https://github.com/franjisca/positive-habit.git
 cd positive-habit
 
 # 2. 데이터베이스 생성
