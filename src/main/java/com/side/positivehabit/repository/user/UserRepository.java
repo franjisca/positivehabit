@@ -4,7 +4,7 @@ import com.side.positivehabit.domain.user.Provider;
 import com.side.positivehabit.domain.user.User;
 import com.side.positivehabit.dto.user.UserSearchCondition;
 import io.lettuce.core.dynamic.annotation.Param;
-import org.hibernate.query.Page;
+import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

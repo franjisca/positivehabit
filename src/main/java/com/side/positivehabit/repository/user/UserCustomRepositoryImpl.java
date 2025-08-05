@@ -4,14 +4,12 @@ import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.side.positivehabit.domain.user.Provider;
-import com.side.positivehabit.domain.user.QUser;
 import com.side.positivehabit.domain.user.Role;
 import com.side.positivehabit.domain.user.User;
 import com.side.positivehabit.dto.user.UserSearchCondition;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.support.PageableExecutionUtils;
-import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
 
 import java.awt.print.Pageable;
@@ -26,6 +24,11 @@ import static com.side.positivehabit.domain.usersettings.QUserSettings.userSetti
 public class UserRepositoryImpl implements UserCustomRepository {
 
     private final JPAQueryFactory queryFactory;
+
+    @Override
+    public User findUserByEmailUsingQuerydsl(String email) {
+        return null;
+    }
 
     @Override
     public Page<User> searchUsers(UserSearchCondition condition, Pageable pageable) {

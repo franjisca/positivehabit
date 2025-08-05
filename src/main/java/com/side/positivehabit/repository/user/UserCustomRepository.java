@@ -2,7 +2,7 @@ package com.side.positivehabit.repository.user;
 
 import com.side.positivehabit.domain.user.User;
 import com.side.positivehabit.dto.user.UserSearchCondition;
-import org.hibernate.query.Page;
+import org.springframework.data.domain.Page;
 
 import java.awt.print.Pageable;
 import java.time.LocalDateTime;
