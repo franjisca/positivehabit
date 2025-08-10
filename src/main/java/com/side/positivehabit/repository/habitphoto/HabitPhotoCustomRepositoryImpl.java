@@ -2,10 +2,14 @@ package com.side.positivehabit.repository.habitphoto;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.side.positivehabit.domain.habit.HabitPhoto;
+import com.side.positivehabit.dto.habitphoto.PhotoStatistics;
+import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.List;
 
+
+@RequiredArgsConstructor
 public class HabitPhotoCustomRepositoryImpl {
     private final JPAQueryFactory queryFactory;
 

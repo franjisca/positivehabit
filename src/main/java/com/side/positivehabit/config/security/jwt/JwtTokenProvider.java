@@ -1,5 +1,6 @@
 package com.side.positivehabit.config.security.jwt;
 
+import com.side.positivehabit.config.security.service.CustomUserDetails;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import lombok.RequiredArgsConstructor;

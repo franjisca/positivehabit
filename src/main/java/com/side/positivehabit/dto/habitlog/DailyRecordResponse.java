@@ -2,6 +2,7 @@ package com.side.positivehabit.dto.habitlog;
 
 import com.side.positivehabit.domain.dailyrecord.DailyRecord;
 import com.side.positivehabit.domain.habit.Habit;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

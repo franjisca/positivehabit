@@ -1,6 +1,7 @@
 package com.side.positivehabit.repository.habitphoto;
 
 import com.side.positivehabit.domain.habit.HabitPhoto;
+import com.side.positivehabit.dto.habitphoto.PhotoStatistics;
 
 import java.time.LocalDate;
 import java.util.List;

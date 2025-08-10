@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface HabitPhotoRepository extends JpaRepository<HabitPhoto, Long>, HabitPhotoRepositoryCustom {
+public interface HabitPhotoRepository extends JpaRepository<HabitPhoto, Long>, HabitPhotoCustomRepository {
 
     List<HabitPhoto> findByHabitAndUploadDate(Habit habit, LocalDate uploadDate);
 

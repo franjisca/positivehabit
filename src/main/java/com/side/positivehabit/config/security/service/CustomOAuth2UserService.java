@@ -1,10 +1,19 @@
 package com.side.positivehabit.config.security.service;
 
+import com.side.positivehabit.config.security.oauth.user.OAuth2UserInfo;
+import com.side.positivehabit.config.security.oauth.user.OAuth2UserInfoFactory;
+import com.side.positivehabit.domain.user.User;
 import com.side.positivehabit.repository.user.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
+import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -19,7 +28,7 @@ public class CustomOAuth2UserService {
         OAuth2User oauth2User = super.loadUser(userRequest);
 
         try {
-            return processOAuth2User(userRequest, oauth2User);
+            return (CustomUserDetails) processOAuth2User(userRequest, oauth2User);
         } catch (Exception ex) {
             log.error("OAuth2 사용자 처리 중 오류 발생", ex);
             throw new OAuth2AuthenticationException("OAuth2 사용자 처리 실패");

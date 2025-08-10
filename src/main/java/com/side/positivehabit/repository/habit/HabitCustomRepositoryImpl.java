@@ -5,6 +5,9 @@ import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import com.side.positivehabit.domain.habit.DayOfWeek;
 import com.side.positivehabit.domain.habit.Habit;
+import com.side.positivehabit.dto.habit.HabitSearchCondition;
+import com.side.positivehabit.dto.habit.HabitStatistics;
+import org.springframework.data.domain.Page;
 import org.springframework.data.support.PageableExecutionUtils;
 import org.springframework.util.StringUtils;
 
@@ -13,9 +16,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-import static com.side.positivehabit.domain.habit.QHabit.habit;
-import static com.side.positivehabit.domain.dailyrecord.QHabitLog.habitLog;
-import static com.side.positivehabit.domain.user.QUser.user;
 
 public class HabitCustomRepositoryImpl implements HabitCustomRepository{
 

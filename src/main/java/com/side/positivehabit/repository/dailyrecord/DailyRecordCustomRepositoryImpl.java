@@ -3,15 +3,19 @@ package com.side.positivehabit.repository.dailyrecord;
 import com.querydsl.core.Tuple;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
+import com.side.positivehabit.domain.dailyrecord.DailyRecord;
+import com.side.positivehabit.dto.habitlog.DailyRecordStatistics;
+import com.side.positivehabit.dto.habitlog.HabitCompletionRate;
+import com.side.positivehabit.dto.habitlog.StreakInfo;
+import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static com.side.positivehabit.domain.habit.QHabit.habit;
-import static com.side.positivehabit.domain.dailyrecord.QHabitLog.habitLog;
 
+@RequiredArgsConstructor
 public class DailyRecordCustomRepositoryImpl implements DailyRecordCustomRepository {
 
     private final JPAQueryFactory queryFactory;

@@ -16,12 +16,10 @@ import java.awt.print.Pageable;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static com.side.positivehabit.domain.user.QUser.user;
-import static com.side.positivehabit.domain.usersettings.QUserSettings.userSettings;
 
 
 @RequiredArgsConstructor
-public class UserRepositoryImpl implements UserCustomRepository {
+public class UserCustomRepositoryImpl implements UserCustomRepository {
 
     private final JPAQueryFactory queryFactory;
 

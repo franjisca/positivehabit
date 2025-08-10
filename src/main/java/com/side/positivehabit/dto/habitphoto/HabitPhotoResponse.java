@@ -1,6 +1,7 @@
 package com.side.positivehabit.dto.habitphoto;
 
 import com.side.positivehabit.domain.habit.HabitPhoto;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

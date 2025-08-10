@@ -1,6 +1,11 @@
 package com.side.positivehabit.repository.dailyrecord;
 
+import com.side.positivehabit.dto.habitlog.DailyRecordStatistics;
+import com.side.positivehabit.dto.habitlog.HabitCompletionRate;
+import com.side.positivehabit.dto.habitlog.StreakInfo;
+
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Map;
 
 public interface DailyRecordCustomRepository {

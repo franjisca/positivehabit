@@ -50,6 +50,8 @@ public class DailyRecord extends BaseTimeEntity {
     @JoinColumn(name = "habit_id", nullable = false)
     private Habit habit;
 
+    private String imageUrl;
+
     // 비즈니스 메서드
     public void complete() {
         this.isCompleted = true;

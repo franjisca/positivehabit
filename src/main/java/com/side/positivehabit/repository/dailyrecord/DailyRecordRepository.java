@@ -1,8 +1,7 @@
 package com.side.positivehabit.repository.dailyrecord;
 
+import com.side.positivehabit.domain.dailyrecord.DailyRecord;
 import com.side.positivehabit.domain.habit.Habit;
-import com.side.positivehabit.domain.DailyRecord.DailyRecord;
-import com.side.positivehabit.domain.DailyRecord.DailyRecord;
 import com.side.positivehabit.domain.user.User;
 import com.side.positivehabit.repository.habit.HabitCustomRepository;
 import io.lettuce.core.dynamic.annotation.Param;

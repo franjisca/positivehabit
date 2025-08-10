@@ -1,8 +1,11 @@
 package com.side.positivehabit.config.security;
 
 
+import com.side.positivehabit.config.security.handler.OAuth2AuthenticationFailureHandler;
+import com.side.positivehabit.config.security.handler.OAuth2AuthenticationSuccessHandler;
 import com.side.positivehabit.config.security.jwt.JwtAuthenticationEntryPoint;
 import com.side.positivehabit.config.security.jwt.JwtAuthenticationFilter;
+import com.side.positivehabit.config.security.service.CustomOAuth2UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +17,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
+import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
@@ -81,7 +87,7 @@ public class SecurityConfig {
                                 .baseUri("/login/oauth2/code/*")
                         )
                         .userInfoEndpoint(userInfo -> userInfo
-                                .userService(customOAuth2UserService)
+                                .userService((OAuth2UserService<OAuth2UserRequest, OAuth2User>) customOAuth2UserService)
                         )
                         .successHandler(oAuth2AuthenticationSuccessHandler)
                         .failureHandler(oAuth2AuthenticationFailureHandler)

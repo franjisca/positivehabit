@@ -1,6 +1,6 @@
 package com.side.positivehabit.dto.habitlog;
 
-import com.side.positivehabit.domain.dailyrecord.HabitLog;
+import com.side.positivehabit.domain.dailyrecord.DailyRecord;
 
 import java.time.LocalDate;
 
@@ -11,12 +11,12 @@ public record HabitLogResponseDto(
         boolean completed,
         String imageUrl // ✅ 포함
 ) {
-    public static HabitLogResponseDto from(HabitLog log) {
+    public static HabitLogResponseDto from(DailyRecord log) {
         return new HabitLogResponseDto(
                 log.getId(),
                 log.getHabit().getId(),
-                log.getDate(),
-                log.isCompleted(),
+                log.getUpdatedAt().toLocalDate(),
+                log.getIsCompleted(),
                 log.getImageUrl()
         );
     }

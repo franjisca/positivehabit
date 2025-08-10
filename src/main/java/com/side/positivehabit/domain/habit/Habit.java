@@ -2,7 +2,7 @@ package com.side.positivehabit.domain.habit;
 
 
 import com.side.positivehabit.domain.common.BaseTimeEntity;
-import com.side.positivehabit.domain.dailyrecord.HabitLog;
+import com.side.positivehabit.domain.dailyrecord.DailyRecord;
 import com.side.positivehabit.domain.user.User;
 import jakarta.persistence.*;
 import lombok.*;
@@ -94,7 +94,7 @@ public class Habit extends BaseTimeEntity {
 
     @OneToMany(mappedBy = "habit", cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
-    private List<HabitLog> dailyRecords = new ArrayList<>();
+    private List<DailyRecord> dailyRecords = new ArrayList<>();
 
     @OneToMany(mappedBy = "habit", cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
@@ -165,12 +165,12 @@ public class Habit extends BaseTimeEntity {
         this.user = user;
     }
 
-    public void addDailyRecord(HabitLog dailyRecord) {
+    public void addDailyRecord(DailyRecord dailyRecord) {
         dailyRecords.add(dailyRecord);
         dailyRecord.setHabit(this);
     }
 
-    public void removeDailyRecord(HabitLog dailyRecord) {
+    public void removeDailyRecord(DailyRecord dailyRecord) {
         dailyRecords.remove(dailyRecord);
         dailyRecord.setHabit(null);
     }

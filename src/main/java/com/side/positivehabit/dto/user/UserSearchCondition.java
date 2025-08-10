@@ -1,10 +1,15 @@
 package com.side.positivehabit.dto.user;
 
+import com.side.positivehabit.domain.user.Provider;
+import com.side.positivehabit.domain.user.Role;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
 
 @Getter
 @NoArgsConstructor

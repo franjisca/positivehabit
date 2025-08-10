@@ -2,10 +2,13 @@ package com.side.positivehabit.repository.emotion;
 
 import com.querydsl.core.Tuple;
 import com.querydsl.jpa.impl.JPAQueryFactory;
+import com.side.positivehabit.domain.emotion.EmotionType;
+import com.side.positivehabit.dto.emotion.EmotionStatistics;
 import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
